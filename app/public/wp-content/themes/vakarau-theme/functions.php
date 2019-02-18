@@ -7,9 +7,15 @@ function vakarau_files() {
   wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
   wp_enqueue_style('university_main_styles', get_stylesheet_uri(), NULL, microtime()); 
 }
+
 // This is I believe what is called a "hook" -- It basically injects this bit of
 // code write before the word press scripts run, that runs vakarau_files() --
 // -- gives access to style.css file
 // imports google-fonts, font-awesome, and compressed JS code
 add_action('wp_enqueue_scripts', 'vakarau_files');
-?>
+
+function company_features() {
+  add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'company_features');
