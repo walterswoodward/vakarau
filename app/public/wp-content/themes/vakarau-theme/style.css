@@ -2042,6 +2042,7 @@ Version: 1.0*/
   
   .generic-content p, .generic-content li {
     font-size: 1.15rem;
+    word-wrap: break-word;
   }
   
   .generic-content blockquote, .generic-content blockquote p {
