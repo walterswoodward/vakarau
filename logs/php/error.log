@@ -13,3 +13,48 @@ Stack trace:
   thrown in /app/public/wp-content/themes/vakarau-theme/index.php on line 27
 [17-Feb-2019 22:05:05 UTC] PHP Parse error:  syntax error, unexpected 'wp_enqueue_style' (T_STRING) in /app/public/wp-content/themes/vakarau-theme/functions.php on line 6
 [17-Feb-2019 22:06:08 UTC] PHP Parse error:  syntax error, unexpected 'wp_enqueue_style' (T_STRING) in /app/public/wp-content/themes/vakarau-theme/functions.php on line 6
+[25-Feb-2019 15:56:00 UTC] PHP Parse error:  syntax error, unexpected '}' in /app/public/wp-content/themes/vakarau-theme/page.php on line 59
+[25-Feb-2019 16:23:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function block_info() in /app/public/wp-content/themes/vakarau-theme/header.php:7
+Stack trace:
+#0 /app/public/wp-includes/template.php(688): require_once()
+#1 /app/public/wp-includes/template.php(647): load_template('/app/public/wp-...', true)
+#2 /app/public/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /app/public/wp-content/themes/vakarau-theme/index.php(2): get_header()
+#4 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#5 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#6 /app/public/index.php(17): require('/app/public/wp-...')
+#7 {main}
+  thrown in /app/public/wp-content/themes/vakarau-theme/header.php on line 7
+[25-Feb-2019 16:24:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function block_info() in /app/public/wp-content/themes/vakarau-theme/header.php:7
+Stack trace:
+#0 /app/public/wp-includes/template.php(688): require_once()
+#1 /app/public/wp-includes/template.php(647): load_template('/app/public/wp-...', true)
+#2 /app/public/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /app/public/wp-content/themes/vakarau-theme/index.php(2): get_header()
+#4 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#5 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#6 /app/public/index.php(17): require('/app/public/wp-...')
+#7 {main}
+  thrown in /app/public/wp-content/themes/vakarau-theme/header.php on line 7
+[25-Feb-2019 16:24:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function block_info() in /app/public/wp-content/themes/vakarau-theme/header.php:7
+Stack trace:
+#0 /app/public/wp-includes/template.php(688): require_once()
+#1 /app/public/wp-includes/template.php(647): load_template('/app/public/wp-...', true)
+#2 /app/public/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /app/public/wp-content/themes/vakarau-theme/index.php(2): get_header()
+#4 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#5 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#6 /app/public/index.php(17): require('/app/public/wp-...')
+#7 {main}
+  thrown in /app/public/wp-content/themes/vakarau-theme/header.php on line 7
+[25-Feb-2019 16:25:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function blog_info() in /app/public/wp-content/themes/vakarau-theme/header.php:7
+Stack trace:
+#0 /app/public/wp-includes/template.php(688): require_once()
+#1 /app/public/wp-includes/template.php(647): load_template('/app/public/wp-...', true)
+#2 /app/public/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /app/public/wp-content/themes/vakarau-theme/index.php(2): get_header()
+#4 /app/public/wp-includes/template-loader.php(74): include('/app/public/wp-...')
+#5 /app/public/wp-blog-header.php(19): require_once('/app/public/wp-...')
+#6 /app/public/index.php(17): require('/app/public/wp-...')
+#7 {main}
+  thrown in /app/public/wp-content/themes/vakarau-theme/header.php on line 7

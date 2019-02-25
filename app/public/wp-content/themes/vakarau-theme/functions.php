@@ -15,6 +15,9 @@ function vakarau_files() {
 add_action('wp_enqueue_scripts', 'vakarau_files');
 
 function company_features() {
+  register_nav_menu('headerMenuLocation', 'Header Menu Location'); // See main-navigation class in header.php
+  register_nav_menu('footerLocationOne', 'Footer Location One'); // See fist nav-list in footer.php
+  register_nav_menu('footerLocationTwo', 'Footer Location Two'); // See second nav-list in footer.php
   add_theme_support('title-tag');
 }
 
