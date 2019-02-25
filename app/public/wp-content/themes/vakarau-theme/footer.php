@@ -14,18 +14,18 @@
         <div class="site-footer__col-two">
           <h3 class="headline headline--small">Explore</h3>
           <nav class="nav-list">
-            <!-- HardCoded ul-li menu commented out in leiu of word-press admin generated menu below: -->
-            <!-- <ul>
-              <li><a href="<?php echo site_url('/about-us')?>">About Us</a></li>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Campuses</a></li>
-            </ul> -->
-            <?php 
-              wp_nav_menu(array(
-                'theme_location' => 'footerLocationOne'
-              ))
-            ?>
+            <!-- HardCoded ul-li menu.  For an example of a Word Press generated menu see the next nav-list -->
+            <ul>
+              <li
+                <?php 
+                $current_page = 0;
+                if (is_page('about-us') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
+                ?>>
+                <a href="<?php echo site_url('/about-us')?>">About Us</a></li>
+              <li><a href="<?php echo site_url('/programs')?>">Programs</a></li>
+              <li><a href="<?php echo site_url('/events')?>">Events</a></li>
+              <li><a href="<?php echo site_url('/campuses')?>">Campuses</a></li>
+            </ul>
           </nav>
         </div>
 
