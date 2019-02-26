@@ -41,10 +41,16 @@
                 if (is_page('about-us') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
                 ?>>
               <a href="<?php echo site_url('/about-us')?>">About Us</a></li>
-            <li><a href="<?php echo site_url('/programs')?>">Programs</a></li>
+            <li <?php 
+                $current_page = 0;
+                if (is_page('programs') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
+                ?>><a href="<?php echo site_url('/programs')?>">Programs</a></li>
             <li <?php if(get_post_type() == 'event') echo 'class="current-menu-item"'?>><a
                 href="<?php echo get_post_type_archive_link('event'); ?>">Events</a></li>
-            <li><a href="<?php echo site_url('/campuses')?>">Campuses</a></li>
+            <li <?php 
+                $current_page = 0;
+                if (is_page('campuses') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
+                ?>><a href="<?php echo site_url('/campuses')?>">Campuses</a></li>
           </ul>
           <!-- <?php 
             // wp_nav_menu(array(
