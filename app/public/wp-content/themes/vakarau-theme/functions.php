@@ -22,3 +22,25 @@ function company_features() {
 }
 
 add_action('after_setup_theme', 'company_features');
+
+function company_adjust_queries ($query) {
+  // !is_admin() ensures that only the frontend queries are adjusted
+  // is_post_type_archive('event') points specifically to the archive event page
+  // The last one is just kind of a safety check
+  $today = date('Ymd');
+  if (!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()){
+    $query->set('meta_key', 'event_date');
+    $query->set('orderby', 'meta_value_num');
+    $query->set('order', 'ASC');
+    $query->set('meta_query', array(
+      array(
+        'key' => 'event_date',
+        'compare' => '>=',
+        "value" => $today,
+        'type' => 'numeric'
+      )
+    ));
+  }
+}
+
+add_action('pre_get_posts', 'company_adjust_queries');
