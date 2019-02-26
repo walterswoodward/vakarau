@@ -23,10 +23,11 @@ get_header();
         $today = date('Ymd');
         $homepageEvents = new WP_Query(array(
           'post_type' => 'event',
-          'posts_per_page' => -1,
+          'posts_per_page' => 3,
           'meta_key' => 'event_date',
           'orderby' => 'meta_value_num',
           'order' => 'ASC',
+          // Filters out events that took place in the past
           'meta_query' => array(
             array(
               'key' => 'event_date',
@@ -88,7 +89,7 @@ get_header();
 
       <?php
         $homepagePosts = new WP_Query(array(
-          'posts_per_page' => 2
+          'posts_per_page' => 3
         ));
         while($homepagePosts->have_posts()) {
           
