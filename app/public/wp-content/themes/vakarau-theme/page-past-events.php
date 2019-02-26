@@ -65,7 +65,7 @@ get_header();
   <?php
   }
   echo paginate_links(array(
-    'total' => $pastEvents->max_num_pages
+    'total' => $pastEvents->max_num_pages // This is needed b/c we are relying on our own custom query
   ));
   ?>
 </div>
