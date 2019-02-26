@@ -35,22 +35,31 @@
             <li><a href="#">Blog</a></li>
           </ul> -->
           <ul>
+            <!-- Below notice the conditional addition of a class current-menu-item, which just ensures that the right menu item is colored yellow when active -->
+            <!-- About Us -->
             <li
               <?php 
                 $current_page = 0;
                 if (is_page('about-us') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
                 ?>>
               <a href="<?php echo site_url('/about-us')?>">About Us</a></li>
-            <li <?php 
+            <!-- Programs -->
+            <li
+              <?php 
                 $current_page = 0;
                 if (is_page('programs') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
-                ?>><a href="<?php echo site_url('/programs')?>">Programs</a></li>
-            <li <?php if(get_post_type() == 'event') echo 'class="current-menu-item"'?>><a
+                ?>>
+              <a href="<?php echo site_url('/programs')?>">Programs</a></li>
+            <!-- Events -->
+            <li <?php if(get_post_type() == 'event' OR is_page('past-events')) echo 'class="current-menu-item"'?>><a
                 href="<?php echo get_post_type_archive_link('event'); ?>">Events</a></li>
-            <li <?php 
+            <!-- Campuses -->
+            <li
+              <?php 
                 $current_page = 0;
                 if (is_page('campuses') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
-                ?>><a href="<?php echo site_url('/campuses')?>">Campuses</a></li>
+                ?>>
+              <a href="<?php echo site_url('/campuses')?>">Campuses</a></li>
           </ul>
           <!-- <?php 
             // wp_nav_menu(array(
