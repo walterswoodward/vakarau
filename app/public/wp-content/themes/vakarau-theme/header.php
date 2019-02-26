@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <!-- Sets language automagically using Word Press method language_attributes() -->
-<html <?php language_attributes(); ?> >
+<html <?php language_attributes(); ?>>
 
 <head>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet">
   <!-- Lets WordPress be in control of our head section -->
-  <meta charset = "<?php bloginfo('charset') ?>">
+  <meta charset="<?php bloginfo('charset') ?>">
   <!-- In coordination with responsive CSS, this meta tag will ensure mobile device pages render properly -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
 </head>
 
 <!-- body_class() automatically generates class names for each page -->
-<body <?php body_class(); ?>> 
-<header class="site-header">
+
+<body <?php body_class(); ?>>
+  <header class="site-header">
     <div class="container">
-      <h1 class="school-logo-text float-left"><a href="<?php echo site_url('/')?>"><strong>Vakarau</strong> Industries</a></h1>
+      <h1 class="school-logo-text float-left"><a href="<?php echo site_url('/')?>"><strong>Vakarau</strong>
+          Industries</a></h1>
       <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
       <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
       <div class="site-header__menu group">
@@ -45,4 +49,3 @@
       </div>
     </div>
   </header>
- 

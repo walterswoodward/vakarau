@@ -22,3 +22,15 @@ function company_features() {
 }
 
 add_action('after_setup_theme', 'company_features');
+
+function company_post_types() {
+  register_post_type('event', array(
+    'public' => true,
+    'labels' => array(
+    "name" => 'Events',
+    ),
+    'menu_icon' => 'dashicons-calendar-alt'
+  ));
+}
+
+add_action('init', 'company_post_types');
