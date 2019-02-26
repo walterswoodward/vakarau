@@ -2,6 +2,7 @@
 
 function company_post_types() {
   register_post_type('event', array(
+    'supports' => array('title', 'editor', 'excerpt'),
     'public' => true,
     'has_archive' => true,
     'rewrite' => array(
