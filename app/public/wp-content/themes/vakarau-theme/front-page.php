@@ -7,10 +7,10 @@ get_header();
     style="background-image: url(<?php echo get_theme_file_uri('/images/fiji-aerial-shot-min.jpeg') ?>);"></div>
   <div class="page-banner__content container t-center c-white">
     <h1 class="headline headline--large">Bula Vinaka!</h1>
-    <h2 class="headline headline--medium">Welcome to Vakarau Industries!</h2>
+    <h2 class="headline headline--medium">Welcome to Vakarau Events!</h2>
     <!-- <h3 class="headline headline--small">Why don&rsquo;t you check out the <strong>gift</strong> you&rsquo;re
       interested in?</h3> -->
-    <a href="#" class="btn btn--large btn--blue">Find Your Gift</a>
+    <a href="#" class="btn btn--large btn--blue">Click here to get started!</a>
   </div>
 </div>
 
@@ -127,6 +127,15 @@ get_header();
 </div>
 
 <div class="hero-slider">
+<div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/vegetables.jpeg')?>);">
+    <div class="hero-slider__interior container">
+      <div class="hero-slider__overlay">
+        <h2 class="headline headline--medium t-center">Locally Grown Vegetables</h2>
+        <p class="t-center">Keeping our village healthy and productive</p>
+        <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
+      </div>
+    </div>
+  </div>
   <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/bus.jpg')?>);">
     <div class="hero-slider__interior container">
       <div class="hero-slider__overlay">
@@ -136,20 +145,11 @@ get_header();
       </div>
     </div>
   </div>
-  <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/apples.jpg')?>);">
-    <div class="hero-slider__interior container">
-      <div class="hero-slider__overlay">
-        <h2 class="headline headline--medium t-center">An Apple a Day</h2>
-        <p class="t-center">Our dentistry program recommends eating apples.</p>
-        <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
-      </div>
-    </div>
-  </div>
   <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('/images/bread.jpg')?>);">
     <div class="hero-slider__interior container">
       <div class="hero-slider__overlay">
         <h2 class="headline headline--medium t-center">Free Food</h2>
-        <p class="t-center">Vakarau Industries offers lunch plans for those in need.</p>
+        <p class="t-center">Vakarau Events offers lunch plans for those in need.</p>
         <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
       </div>
     </div>

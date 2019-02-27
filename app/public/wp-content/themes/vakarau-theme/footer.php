@@ -6,7 +6,7 @@
 
       <div class="site-footer__col-one">
         <h1 class="school-logo-text school-logo-text--alt-color"><a
-            href="<?php echo site_url('/') ?>"><strong>Vakarau </strong>Industries</a>
+            href="<?php echo site_url('/') ?>"><strong>Vakarau </strong>Events</a>
         </h1>
         <p><a class="site-footer__link" href="#">555.555.5555</a></p>
       </div>
@@ -22,9 +22,9 @@
                 if (is_page('about-us') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
                 ?>>
                 <a href="<?php echo site_url('/about-us')?>">About Us</a></li>
-              <li><a href="<?php echo site_url('/programs')?>">Programs</a></li>
+              <li><a href="<?php echo site_url('/themes')?>">Themes</a></li>
               <li><a href="<?php echo site_url('/events')?>">Events</a></li>
-              <li><a href="<?php echo site_url('/campuses')?>">Campuses</a></li>
+              <li><a href="<?php echo site_url('/locations')?>">Locations</a></li>
             </ul>
           </nav>
         </div>

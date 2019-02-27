@@ -23,7 +23,24 @@ while(have_posts()) { // Iterates through all your posts
   <div class="generic-content">
     <?php the_content() ?>
   </div>
+  <?php 
+  $relatedThemes = get_field('related_themes');
+  if ($relatedThemes) {
+    echo '<hr class="section-break">';
+    echo '<h2 class="headline headline--medium">Related Theme(s)</h2>';
+    echo '<ul class="link-list min-list">';
+    forEach($relatedThemes as $theme){
+      ?>
+      <li><a href="<?php echo get_the_permalink($theme); ?>"><?php echo get_the_title($theme);
+  ?></a></li>
+      <?php
+    }
+    echo '</ul>';
+    
+  }
+  ?>
 </div>
+
 <hr>
 <?php
 }

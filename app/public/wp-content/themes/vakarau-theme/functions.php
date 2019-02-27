@@ -24,11 +24,24 @@ function company_features() {
 add_action('after_setup_theme', 'company_features');
 
 function company_adjust_queries ($query) {
+  // You can adjust queries here OR write completely custom queries above your
+  // while loops in archive-xxxxx file.  As you can see below, we determined
+  // that for event and theme it would be best to adjust the queries provided
+  // out of the box
+  
   // !is_admin() ensures that only the frontend queries are adjusted
   // is_post_type_archive('event') points specifically to the archive event page
-  // The last one is just kind of a safety check
-  $today = date('Ymd');
+  // The last one is just kind of a safety check - only adjust the default query
+  // for e.g. 'theme' or 'event'
+  
+  if (!is_admin() AND is_post_type_archive('theme') AND $query->is_main_query()){
+    $query->set('post_per_page', '-1');
+    $query->set('orderby', 'title');
+    $query->set('order', 'ASC');
+  }
+
   if (!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()){
+    $today = date('Ymd');
     $query->set('meta_key', 'event_date');
     $query->set('orderby', 'meta_value_num');
     $query->set('order', 'ASC');

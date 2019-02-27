@@ -1,6 +1,7 @@
 <?php
 
 function company_post_types() {
+  // Event Post Type:
   register_post_type('event', array(
     'supports' => array('title', 'editor', 'excerpt'),
     'public' => true,
@@ -17,6 +18,25 @@ function company_post_types() {
     ),
     'menu_icon' => 'dashicons-calendar-alt'
   ));
+  // Project Post Type:
+  register_post_type('theme', array(
+    'supports' => array('title', 'editor'),
+    'public' => true,
+    'has_archive' => true,
+    'rewrite' => array(
+      'slug' => 'themes'
+    ),
+    'labels' => array(
+    "name" => 'Themes',
+    'add_new_item' => 'Add New Theme',
+    "edit_item" => 'Edit Theme',
+    'all_items' => 'All Themes',
+    'singular_name' => 'Theme'
+    ),
+    'menu_icon' => 'dashicons-list-view'
+  ));
+
+  
 }
 
 add_action('init', 'company_post_types');
