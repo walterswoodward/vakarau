@@ -47,9 +47,9 @@
             <li
               <?php 
                 $current_page = 0;
-                if (is_page('themes') or wp_get_post_parent_id($current_page)) echo 'class="current-menu-item"'
+                if (get_post_type() == 'theme') echo 'class="current-menu-item"'
                 ?>>
-              <a href="<?php echo site_url('/themes')?>">Themes</a></li>
+              <a href="<?php echo get_post_type_archive_link('theme');?>">Themes</a></li>
             <!-- Events -->
             <li <?php if(get_post_type() == 'event' OR is_page('past-events')) echo 'class="current-menu-item"'?>><a
                 href="<?php echo get_post_type_archive_link('event'); ?>">Events</a></li>

@@ -2,6 +2,7 @@
   margin: 0;
   font-family: 'Volkhov', serif;
   font-weight: 300;
+  color: black;
 
   &--large {
     font-size: 3.6rem;

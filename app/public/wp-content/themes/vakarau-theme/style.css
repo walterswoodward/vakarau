@@ -1221,7 +1221,7 @@ body.login {
   }
   }
 .page-banner__bg-image {
-    opacity: .33;
+    opacity: 0.6;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -1482,6 +1482,7 @@ body.admin-bar .search-overlay {
   margin: 0;
   font-family: 'Volkhov', serif;
   font-weight: 300;
+  color: black;
 
 }
 .headline--large {

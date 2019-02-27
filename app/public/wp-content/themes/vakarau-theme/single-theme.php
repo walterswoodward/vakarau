@@ -24,6 +24,37 @@ while(have_posts()) { // Iterates through all your posts
     <?php the_content() ?>
   </div>
   <?php
+
+  
+ $relatedTeachers = new WP_Query(array(
+  'post_type' => 'teacher',
+  'posts_per_page' => -1,
+  'orderby' => 'title',
+  'order' => 'ASC',
+  // Filters out events that took place in the past
+  'meta_query' => array(
+    array(
+      'key' => 'related_themes',
+      'compare' => 'LIKE',
+      "value" => '"' . get_the_ID() . '"',
+    )
+  )
+));
+if ($relatedTeachers->have_posts()){
+echo '<hr class="section-break">';
+echo '<h2 class="headline headline--medium">' . get_the_title() . ' Teachers</h2>';
+echo '<ul class="link-list min-list">';
+while ($relatedTeachers->have_posts()) {
+  $relatedTeachers->the_post();
+  ?>
+  <li><a href="<?php echo the_permalink(); ?>"><?php echo the_title();
+  ?></a></li>  <?php
+}
+echo '</ul>';
+}
+
+wp_reset_postdata();
+
         $today = date('Ymd');
         $homepageEvents = new WP_Query(array(
           'post_type' => 'event',
